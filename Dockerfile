@@ -18,6 +18,8 @@ COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 ADD start.sh /usr/local/bin/start.sh
 
+RUN chmod +x /usr/local/bin/start.sh
+
 ADD vsftpd.conf /etc/vsftpd.conf
 
 RUN mkdir /ftp

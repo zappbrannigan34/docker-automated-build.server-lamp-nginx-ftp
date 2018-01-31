@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ $1 == 'no-bootstrap' ]; then
+if [[ $1 == 'no-bootstrap' ]]; then
   exec bash
 fi
 
@@ -12,7 +12,7 @@ else
   useradd -d /ftp/${USER} -m -p ${ENC_PASS} -u 1001 -s /bin/sh ${USER}
 fi
 
-if [ $1 == 'vsftpd' ]; then
+if [[ $1 == 'vsftpd' ]]; then
   exec vsftpd
 else
   exec $@
